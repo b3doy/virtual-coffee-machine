@@ -1,4 +1,4 @@
-from resources import MENU, resources, profit
+from resources import MENU, resources, income
 
 # check if resources is sufficient
 def check_resources(order_menu):
@@ -38,8 +38,8 @@ def check_transaction(payment, cost):
     if payment >= cost:
         change = round(payment - cost, 2)
         print(f"Here is your change: ${change}")
-        global profit
-        profit += cost
+        global income
+        income += cost
         return True
     else:
         print("Sorry that's not enough money. Money refunded.") 
@@ -67,7 +67,7 @@ while machine_on:
         print(f"Water: {resources['water']}ml")
         print(f"Milk: {resources['milk']}ml")
         print(f"Coffee: {resources['coffee']}ml")
-        print(f"Money: ${profit}")
+        print(f"Money: ${income}")
     # Make a Coffee when user enter the valid menu
     elif user_choice == "espresso" or user_choice == "latte" or user_choice == "cappuccino":
         drink = MENU[user_choice]
