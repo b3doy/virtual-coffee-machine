@@ -66,7 +66,7 @@ while machine_on:
     elif user_choice == "report":
         print(f"Water: {resources['water']}ml")
         print(f"Milk: {resources['milk']}ml")
-        print(f"Coffee: {resources['coffee']}ml")
+        print(f"Coffee: {resources['coffee']}gr")
         print(f"Money: ${income}")
     # Make a Coffee when user enter the valid menu
     elif user_choice == "espresso" or user_choice == "latte" or user_choice == "cappuccino":
